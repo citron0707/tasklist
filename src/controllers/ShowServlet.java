@@ -17,13 +17,13 @@ import utils.DButil;
  * Servlet implementation class ShowServler
  */
 @WebServlet("/show")
-public class ShowServler extends HttpServlet {
+public class ShowServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ShowServler() {
+    public ShowServlet() {
         super();
     }
 
@@ -42,7 +42,6 @@ public class ShowServler extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tasks/show.jsp");
         rd.forward(request, response);
     }
-
-    }
+}
 
 
