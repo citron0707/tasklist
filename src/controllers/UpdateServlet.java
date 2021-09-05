@@ -47,7 +47,6 @@ public class UpdateServlet extends HttpServlet {
             em.getTransaction().begin();
             em.getTransaction().commit();
             em.close();
-
             request.getSession().removeAttribute("task_id");
 
             response.sendRedirect(request.getContextPath() + "/index");
