@@ -34,7 +34,6 @@ public class EditServlet extends HttpServlet {
         EntityManager em = DButil.createEntityManager();
 
         Task t = em.find(Task.class, Integer.parseInt(request.getParameter("id")));
-
         em.close();
 
         request.setAttribute("task", t);
@@ -45,7 +44,7 @@ public class EditServlet extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tasks/edit.jsp");
         rd.forward(request, response);
     }
-
-
-
 }
+
+
+
